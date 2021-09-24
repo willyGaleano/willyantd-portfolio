@@ -28,6 +28,9 @@ function App() {
           <Route exact path="/contactame">
             <ContactoPage />
           </Route>
+          <Route path="*">
+            <HomePage />
+          </Route>
         </Switch>
       </AnimatePresence>
     </BaseLayout>
