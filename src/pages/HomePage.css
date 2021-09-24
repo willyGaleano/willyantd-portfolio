@@ -1,0 +1,16 @@
+@import "~antd/dist/antd.css";
+
+.typography {
+  position: absolute;
+  top: 40%;
+}
+
+.name {
+  color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .typography {
+    top: 20%;
+  }
+}

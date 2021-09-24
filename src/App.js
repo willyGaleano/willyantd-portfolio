@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch, useLocation } from "react-router-dom";
+import BaseLayout from "./layouts/base/BaseLayout";
+import ContactoPage from "./pages/contacto/ContactoPage";
+import HomePage from "./pages/HomePage";
+import ProyectoDetallePage from "./pages/proyectos/ProyectoDetallePage";
+import ProyectosPage from "./pages/proyectos/ProyectosPage";
+import ResumenPage from "./pages/resumen/ResumenPage";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BaseLayout>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/resumen">
+            <ResumenPage />
+          </Route>
+          <Route exact path="/proyectos">
+            <ProyectosPage />
+          </Route>
+          <Route exact path="/proyecto-detalle">
+            <ProyectoDetallePage />
+          </Route>
+          <Route exact path="/contactame">
+            <ContactoPage />
+          </Route>
+        </Switch>
+      </AnimatePresence>
+    </BaseLayout>
   );
 }
 

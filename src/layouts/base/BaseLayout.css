@@ -1,0 +1,16 @@
+@import "~antd/dist/antd.css";
+
+.site-layout {
+  background-color: #ece4ec;
+  background-image: linear-gradient(
+    33deg,
+    #ece4ec 0%,
+    #deecee 50%,
+    #dcedf7 100%
+  );
+}
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #394d6b;
+}
+
+/*#edf2fb*/
