@@ -1,4 +1,13 @@
-import { List, Card, Image, Col, Row, Divider, Tooltip } from "antd";
+import {
+  List,
+  Card,
+  Image,
+  Col,
+  Row,
+  Divider,
+  Tooltip,
+  Typography,
+} from "antd";
 import { useState } from "react";
 import GithubAccIcon from "../../components/icons/acciones/GuthubAccIcon";
 import DemoIcon from "../../components/icons/acciones/DemoIcon";
@@ -7,8 +16,11 @@ import { Link } from "react-router-dom";
 import Text from "antd/lib/typography/Text";
 import { Content } from "antd/lib/layout/layout";
 import { motion } from "framer-motion";
+import { proyectos } from "../../utils/data/proyectos";
 
 const { Meta } = Card;
+const { Link: LinkAntd } = Typography;
+
 const containerVariant = {
   hidden: {
     opacity: 0,
@@ -25,32 +37,6 @@ const containerVariant = {
   },
 };
 const ProyectosPage = () => {
-  const data = [
-    {
-      title: "Title 1",
-    },
-    {
-      title: "Title 2",
-    },
-    {
-      title: "Title 3",
-    },
-    {
-      title: "Title 4",
-    },
-    {
-      title: "Title 5",
-    },
-    {
-      title: "Title 6",
-    },
-    {
-      title: "Title 7",
-    },
-    {
-      title: "Title 8",
-    },
-  ];
   return (
     <motion.div
       variants={containerVariant}
@@ -73,7 +59,7 @@ const ProyectosPage = () => {
               md: 2,
               lg: 3,
               xl: 3,
-              xxl: 3,
+              xxl: 2,
             }}
             pagination={{
               onChange: (page) => {
@@ -81,30 +67,33 @@ const ProyectosPage = () => {
               },
               pageSize: 6,
             }}
-            dataSource={data}
+            dataSource={proyectos}
             renderItem={(item) => (
               <List.Item>
                 <Card
                   hoverable
                   cover={
                     <Image
-                      height={250}
+                      height={350}
                       width="100%"
                       style={{ objectFit: "cover" }}
-                      src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                      src={item.portada}
                     />
                   }
                   actions={[
-                    <a href="https://github.com/willyGaleano/WillyNet.SGP">
+                    <LinkAntd
+                      href="https://github.com/willyGaleano/WillyNet.SGP"
+                      target="_blank"
+                    >
                       <Tooltip placement="top" title={"Ver código"}>
                         <GithubAccIcon key="setting" />
                       </Tooltip>
-                    </a>,
-                    <a href="https://github.com/willyGaleano/WillyNet.SGP">
+                    </LinkAntd>,
+                    <LinkAntd href={item.url} target="_blank">
                       <Tooltip placement="top" title={"Ver demo"}>
                         <DemoIcon key="edit" />
                       </Tooltip>
-                    </a>,
+                    </LinkAntd>,
                     <Link to="/proyecto-detalle">
                       <Tooltip placement="top" title={"Ver detalles"}>
                         <DetailIcon key="ellipsis" />
@@ -112,10 +101,7 @@ const ProyectosPage = () => {
                     </Link>,
                   ]}
                 >
-                  <Meta
-                    title={item.title}
-                    description="This is the description"
-                  />
+                  <Meta title={item.title} description={item.descrip} />
                 </Card>
               </List.Item>
             )}

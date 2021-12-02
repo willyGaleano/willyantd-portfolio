@@ -1,6 +1,7 @@
 import Particles from "react-particles-js";
 import arroba from "../assets/svg/cartita.svg";
 import email from "../assets/svg/email2.svg";
+import wsapp from "../assets/svg/whatsapp.svg";
 
 function ParticleContact() {
   return (
@@ -29,6 +30,11 @@ function ParticleContact() {
             images: [
               {
                 src: email,
+                height: 100,
+                width: 100,
+              },
+              {
+                src: wsapp,
                 height: 100,
                 width: 100,
               },

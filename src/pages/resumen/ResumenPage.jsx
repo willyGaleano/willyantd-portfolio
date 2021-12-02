@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Timeline, List, Card, Col, Row, Divider } from "antd";
+import { Timeline, List, Card, Col, Row, Divider, Space } from "antd";
 import { UsbOutlined, BookOutlined } from "@ant-design/icons";
 import Text from "antd/lib/typography/Text";
 import NetIcon from "../../components/icons/tecnologias/NetIcon";
@@ -26,8 +26,8 @@ import FlutterIcon from "../../components/icons/tecnologias/FlutterIcon";
 import AngularIcon from "../../components/icons/tecnologias/AngularIcon";
 import PythonIcon from "../../components/icons/tecnologias/PythonIcon";
 import DjangoIcon from "../../components/icons/tecnologias/DjangoIcon";
-import { Content } from "antd/lib/layout/layout";
 import { motion } from "framer-motion";
+import KomatsuIcon from "../../components/icons/Komatsu";
 
 const containerVariant = {
   hidden: {
@@ -57,17 +57,34 @@ const ResumenPage = () => {
       icon: <ReactIcon />,
     },
     {
+      title: "Redux",
+      icon: <ReduxIcon />,
+    },
+    {
+      title: "Ant Design",
+      icon: <AntDIcon />,
+    },
+    {
+      title: "Azure",
+      icon: <AzureIcon />,
+    },
+    {
+      title: "Sql Server",
+      icon: <SqlServerIcon />,
+    },
+    {
       title: "HTML5",
       icon: <HtmlIcon />,
+    },
+    {
+      title: "CSS3",
+      icon: <CssIcon />,
     },
     {
       title: "Javascript",
       icon: <JsIcon />,
     },
-    {
-      title: "MS. Sql Server",
-      icon: <SqlServerIcon />,
-    },
+
     {
       title: "Git",
       icon: <GitIcon />,
@@ -78,33 +95,15 @@ const ResumenPage = () => {
     },
 
     {
-      title: "Ant Design",
-      icon: <AntDIcon />,
-    },
-
-    {
-      title: "Bootstrap 4",
-      icon: <BootstrapIcon />,
-    },
-    {
       title: "Node JS",
       icon: <NodeIcon />,
     },
-    {
-      title: "Redux",
-      icon: <ReduxIcon />,
-    },
+
     {
       title: "SharePoint",
       icon: <SharePointIcon />,
     },
-  ];
 
-  const dataBasicoIntermedio = [
-    {
-      title: "CSS3",
-      icon: <CssIcon />,
-    },
     {
       title: "IIS 10",
       icon: <IISIcon />,
@@ -113,14 +112,7 @@ const ResumenPage = () => {
       title: "Material UI",
       icon: <MaterialIcon />,
     },
-    {
-      title: "Azure",
-      icon: <AzureIcon />,
-    },
-    {
-      title: "AWS",
-      icon: <AWSIcon />,
-    },
+
     {
       title: "Typescript",
       icon: <TypescriptIcon />,
@@ -133,26 +125,8 @@ const ResumenPage = () => {
       title: "Docker",
       icon: <DockerIcon />,
     },
-    {
-      title: "Python",
-      icon: <PythonIcon />,
-    },
-    {
-      title: "Django",
-      icon: <DjangoIcon />,
-    },
   ];
 
-  const dataAprendiendo = [
-    {
-      title: "Flutter",
-      icon: <FlutterIcon />,
-    },
-    {
-      title: "Angular",
-      icon: <AngularIcon />,
-    },
-  ];
   return (
     <motion.div
       variants={containerVariant}
@@ -184,61 +158,111 @@ const ResumenPage = () => {
           </Divider>
           <Timeline mode="left">
             <Timeline.Item
-              label={"2016/03/01 - Ahora"}
-              dot={<BookOutlined style={{ fontSize: "16px" }} />}
+              label={
+                <Text strong mark>
+                  2016/03/01 - Ahora
+                </Text>
+              }
+              dot={<BookOutlined style={{ fontSize: "18px" }} />}
             >
-              Universidad Nacional Mayor de San Marcos (UNMSM)
+              <Text strong style={{ fontSize: 15 }}>
+                Universidad Nacional Mayor de San Marcos (UNMSM)
+              </Text>
             </Timeline.Item>
-            <Timeline.Item>Ingeniería de Sistemas</Timeline.Item>
+            <Timeline.Item>
+              <Text strong style={{ fontSize: 15 }}>
+                Ingeniería de Sistemas
+              </Text>
+            </Timeline.Item>
             <Timeline.Item
-              label={"2021/09/01 - Ahora"}
-              dot={<BookOutlined style={{ fontSize: "16px" }} />}
+              label={
+                <Text strong mark>
+                  2021/09/01 - Ahora
+                </Text>
+              }
+              dot={<BookOutlined style={{ fontSize: "18px" }} />}
             >
-              Universidad Nacional De la Plata (UNLP)
+              <Text strong style={{ fontSize: 15 }}>
+                Universidad Nacional De la Plata (UNLP)
+              </Text>
             </Timeline.Item>
-            <Timeline.Item>Analista de Sistemas</Timeline.Item>
+            <Timeline.Item>
+              <Text strong style={{ fontSize: 15 }}>
+                Analista de Sistemas
+              </Text>
+            </Timeline.Item>
           </Timeline>
           <Divider>
             <Text strong keyboard>
               EXPERIENCIA LABORAL
             </Text>
           </Divider>
+
           <Timeline mode="left">
             <Timeline.Item
-              label={"2020/03/16 - 2021/12/30"}
-              dot={<UsbOutlined style={{ fontSize: "16px" }} />}
+              label={
+                <Text strong mark>
+                  2020/03/16 - 2021/12/30
+                </Text>
+              }
+              dot={<UsbOutlined style={{ fontSize: "18px" }} />}
             >
-              Desarrollador FullStack - Komatsu Mitsui Maquinarias Perú (KMMP)
+              <Space direction="vertical">
+                <KomatsuIcon />
+                <Text strong style={{ fontSize: 15 }}>
+                  Komatsu Mitsui Maquinarias Perú (KMMP)
+                </Text>
+              </Space>
             </Timeline.Item>
             <Timeline.Item>
-              Creación de aplicaciones para las diversas áreas de KMMP
+              <Text strong style={{ fontSize: 15 }}>
+                Desarrollamos un software para el seguimiento y reporte de las
+              </Text>
               <br />
-              como sistemas de gestión de control de flujo en sus procesos.
+              <Text strong style={{ fontSize: 15 }}>
+                reparaciones de componentes de equipos de minería y
+                construcción.
+              </Text>
             </Timeline.Item>
             <Timeline.Item>
-              Desarrollo de software en .Net Core, React JS y MS SQL Server
+              <Text strong style={{ fontSize: 15 }}>
+                Migré el software mencionado de Django a .Net Core.
+              </Text>
             </Timeline.Item>
             <Timeline.Item>
-              Desarrollo de software en ASP .Net Core MVC, Razor Page y MS SQL
-              Server
+              <Text strong style={{ fontSize: 15 }}>
+                Desplegué aplicaciones .net y react js al IIS 10.
+              </Text>
             </Timeline.Item>
             <Timeline.Item>
-              Desarrollo de software en Power Apps con SharePoint
+              <Text strong style={{ fontSize: 15 }}>
+                LLevamos una aplicación MVC con Razor Page a una Web API + React
+                JS.
+              </Text>
             </Timeline.Item>
-            <Timeline.Item>Desplegando aplicaciones en IIS 10</Timeline.Item>
+            <Timeline.Item>
+              <Text strong style={{ fontSize: 15 }}>
+                Estuve a cargo del desarrollo de una aplicación en PowerApps +
+                SharePoint para el registro y reporte de seguridad en el trabajo
+                en taller.
+              </Text>
+            </Timeline.Item>
+            <Timeline.Item>
+              <Text strong style={{ fontSize: 15 }}>
+                Desarrollé un software para que nuestros clientes puedan
+                monitorear sus componentes.
+              </Text>
+            </Timeline.Item>
           </Timeline>
           <Divider>
             <Text strong keyboard>
-              TECNOLOGÍAS
+              SKILLS
             </Text>
-          </Divider>
-          <Divider orientation="left">
-            <Text keyboard>INTERMEDIO - AVANZADO</Text>
           </Divider>
           <List
             grid={{
-              gutter: 16,
-              xs: 1,
+              gutter: 8,
+              xs: 2,
               sm: 2,
               md: 3,
               lg: 4,
@@ -246,58 +270,6 @@ const ResumenPage = () => {
               xxl: 6,
             }}
             dataSource={dataIntermedioAvanzado}
-            renderItem={(item) => (
-              <List.Item>
-                <Card
-                  hoverable
-                  style={{ textAlign: "center", borderRadius: 10 }}
-                  title={item.icon}
-                >
-                  {item.title}
-                </Card>
-              </List.Item>
-            )}
-          />
-          <Divider orientation="left">
-            <Text keyboard>BÁSICO - INTERMEDIO</Text>
-          </Divider>
-          <List
-            grid={{
-              gutter: 16,
-              xs: 1,
-              sm: 2,
-              md: 3,
-              lg: 4,
-              xl: 6,
-              xxl: 6,
-            }}
-            dataSource={dataBasicoIntermedio}
-            renderItem={(item) => (
-              <List.Item>
-                <Card
-                  hoverable
-                  style={{ textAlign: "center", borderRadius: 10 }}
-                  title={item.icon}
-                >
-                  {item.title}
-                </Card>
-              </List.Item>
-            )}
-          />
-          <Divider orientation="left">
-            <Text keyboard>APRENDIENDO</Text>
-          </Divider>
-          <List
-            grid={{
-              gutter: 16,
-              xs: 1,
-              sm: 2,
-              md: 3,
-              lg: 4,
-              xl: 6,
-              xxl: 6,
-            }}
-            dataSource={dataAprendiendo}
             renderItem={(item) => (
               <List.Item>
                 <Card
