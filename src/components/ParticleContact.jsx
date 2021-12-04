@@ -1,5 +1,6 @@
 import Particles from "react-particles-js";
-import arroba from "../assets/svg/cartita.svg";
+import linked from "../assets/svg/social-linkedin.svg";
+import inst from "../assets/svg/instagram.svg";
 import email from "../assets/svg/email2.svg";
 import wsapp from "../assets/svg/whatsapp.svg";
 
@@ -39,7 +40,12 @@ function ParticleContact() {
                 width: 100,
               },
               {
-                src: arroba,
+                src: linked,
+                height: 100,
+                width: 100,
+              },
+              {
+                src: inst,
                 height: 100,
                 width: 100,
               },

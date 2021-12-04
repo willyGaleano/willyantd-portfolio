@@ -7,8 +7,8 @@ const InstagramIcon = (props) => {
       viewBox="0 0 1024 1024"
       version="1.1"
       p-id="9220"
-      width="2em"
-      height="2em"
+      width="2.5em"
+      height="2.5em"
     >
       <path
         d="M229.518 1024h122.206l-192.828-123.586-158.5-92.618C7.318 928.18 107.432 1024 229.518 1024z"

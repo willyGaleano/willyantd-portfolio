@@ -2,6 +2,8 @@ import Particles from "react-particles-js";
 import net from "../assets/svg/net.svg";
 import react from "../assets/svg/react.svg";
 import antd from "../assets/svg/antd.svg";
+import sql from "../assets/svg/sql_server.svg";
+import azure from "../assets/svg/Azure.svg";
 import "./Particle.css";
 
 function Particle() {
@@ -13,7 +15,7 @@ function Particle() {
       params={{
         particles: {
           number: {
-            value: 30,
+            value: 35,
             density: {
               enable: true,
               value_area: 1000,
@@ -41,6 +43,16 @@ function Particle() {
               },
               {
                 src: antd,
+                height: 100,
+                width: 100,
+              },
+              {
+                src: sql,
+                height: 100,
+                width: 100,
+              },
+              {
+                src: azure,
                 height: 100,
                 width: 100,
               },

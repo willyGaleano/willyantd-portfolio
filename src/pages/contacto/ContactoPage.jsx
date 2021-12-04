@@ -6,6 +6,8 @@ import GmailIcon from "../../components/icons/GmailIcon";
 import { motion } from "framer-motion";
 import WsappIcon from "../../components/icons/WsappIcon";
 import cv from "../../assets/files/CV_Galeano.pdf";
+import InstagramIcon from "../../components/icons/InstagramIcon";
+import LinkedinIcon from "../../components/icons/LinkedinIcon";
 
 const { Title, Link } = Typography;
 const containerVariant = {
@@ -40,13 +42,13 @@ const ContactoPage = () => {
       >
         <Col xxl={24} xl={24} lg={24} md={24} sm={24} xs={24}>
           <Title style={{ textAlign: "center", fontSize: 50 }}>
-            Contactame, <span className="name">envíame un correo</span>
+            Estas son mis redes, <span className="name">contáctame</span>
           </Title>
         </Col>
 
         <Col xxl={18} xl={18} lg={22} md={24} sm={24} xs={24}>
           <Row align="middle" justify="center" gutter={[0, 8]}>
-            <Col xxl={1} xl={1} lg={1} md={2} sm={2} xs={3}>
+            <Col xxl={1} xl={1} lg={6} md={6} sm={6} xs={12}>
               <Space>
                 <Link href="mailto:willyrhcp96@gmail.com" target="_blank">
                   <GmailIcon />
@@ -57,8 +59,17 @@ const ContactoPage = () => {
                 >
                   <WsappIcon />
                 </Link>
-                <Link href={cv} download="williamsGaleano">
-                  <GmailIcon />
+                <Link
+                  href="https://www.linkedin.com/in/williams-david-galeano-gomez-2565771a0"
+                  target="_blank"
+                >
+                  <LinkedinIcon />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/_willyvanilli"
+                  target="_blank"
+                >
+                  <InstagramIcon />
                 </Link>
               </Space>
             </Col>

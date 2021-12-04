@@ -158,11 +158,7 @@ const ResumenPage = () => {
           </Divider>
           <Timeline mode="left">
             <Timeline.Item
-              label={
-                <Text strong mark>
-                  2016/03/01 - Ahora
-                </Text>
-              }
+              label={<Text keyboard>2016/03/01 - Ahora</Text>}
               dot={<BookOutlined style={{ fontSize: "18px" }} />}
             >
               <Text strong style={{ fontSize: 15 }}>
@@ -170,16 +166,10 @@ const ResumenPage = () => {
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
-                Ingeniería de Sistemas
-              </Text>
+              <Text style={{ fontSize: 15 }}>Ingeniería de Sistemas</Text>
             </Timeline.Item>
             <Timeline.Item
-              label={
-                <Text strong mark>
-                  2021/09/01 - Ahora
-                </Text>
-              }
+              label={<Text keyboard>2021/09/01 - Ahora</Text>}
               dot={<BookOutlined style={{ fontSize: "18px" }} />}
             >
               <Text strong style={{ fontSize: 15 }}>
@@ -187,9 +177,7 @@ const ResumenPage = () => {
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
-                Analista de Sistemas
-              </Text>
+              <Text style={{ fontSize: 15 }}>Analista de Sistemas</Text>
             </Timeline.Item>
           </Timeline>
           <Divider>
@@ -200,11 +188,7 @@ const ResumenPage = () => {
 
           <Timeline mode="left">
             <Timeline.Item
-              label={
-                <Text strong mark>
-                  2020/03/16 - 2021/12/30
-                </Text>
-              }
+              label={<Text keyboard>2020/03/16 - 2021/12/30</Text>}
               dot={<UsbOutlined style={{ fontSize: "18px" }} />}
             >
               <Space direction="vertical">
@@ -215,40 +199,40 @@ const ResumenPage = () => {
               </Space>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 Desarrollamos un software para el seguimiento y reporte de las
               </Text>
               <br />
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 reparaciones de componentes de equipos de minería y
                 construcción.
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 Migré el software mencionado de Django a .Net Core.
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 Desplegué aplicaciones .net y react js al IIS 10.
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 LLevamos una aplicación MVC con Razor Page a una Web API + React
                 JS.
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 Estuve a cargo del desarrollo de una aplicación en PowerApps +
                 SharePoint para el registro y reporte de seguridad en el trabajo
                 en taller.
               </Text>
             </Timeline.Item>
             <Timeline.Item>
-              <Text strong style={{ fontSize: 15 }}>
+              <Text style={{ fontSize: 15 }}>
                 Desarrollé un software para que nuestros clientes puedan
                 monitorear sus componentes.
               </Text>

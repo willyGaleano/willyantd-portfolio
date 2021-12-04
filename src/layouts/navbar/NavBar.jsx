@@ -2,6 +2,7 @@ import { Drawer, Button, Layout, Menu } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Text from "antd/lib/typography/Text";
 
 const { Header } = Layout;
 
@@ -26,7 +27,7 @@ const NavBar = () => {
         onClick={() => setVisible(true)}
       />
       <Drawer
-        title="Willy"
+        title={<Text code>Williams Galeano</Text>}
         placement="left"
         onClick={() => setVisible(false)}
         onClose={() => setVisible(false)}

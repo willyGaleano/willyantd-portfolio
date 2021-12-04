@@ -7,8 +7,8 @@ const GmailIcon = (props) => {
       viewBox="0 0 1024 1024"
       version="1.1"
       p-id="4131"
-      width="3em"
-      height="3em"
+      width="2.5em"
+      height="2.5em"
     >
       <path
         d="M928 896H96a64 64 0 0 1-64-64V192a64 64 0 0 1 64-64h832a64 64 0 0 1 64 64v640a64 64 0 0 1-64 64"

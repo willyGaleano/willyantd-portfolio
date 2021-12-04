@@ -1,5 +1,5 @@
 import Particle from "../components/Particle";
-import { Button, Col, Row, Typography } from "antd";
+import { Button, Col, Row, Space, Typography } from "antd";
 import InstagramIcon from "../components/icons/InstagramIcon";
 import LinkedinIcon from "../components/icons/LinkedinIcon";
 import GithubIcon from "../components/icons/GithubIcon";
@@ -7,6 +7,7 @@ import "./HomePage.css";
 import { motion } from "framer-motion";
 import Text from "antd/lib/typography/Text";
 import { Link } from "react-router-dom";
+import cv from "../assets/files/williams-galeano-cv.pdf";
 
 const { Title, Paragraph, Link: LinkAntd } = Typography;
 const containerVariant = {
@@ -50,32 +51,34 @@ const HomePage = () => {
             strong
             style={{ fontSize: 18, textAlign: "center", margin: 10 }}
           >
-            Desarrollador Fullstack, apasionado por la programación que apuesta
-            por la educación autodidacta, siempre dispuesto a aprender nuevas
-            tecnologías y afrontar retos.
+            Desarrollador Full Stack, apasionado por la programación, que
+            apuesta por la educación autodidacta. Siempre dispuesto a aprender
+            nuevas tecnologías, trabajar en equipo y afrontar retos.
           </Paragraph>
         </Col>
-        <Col xxl={18} xl={18} lg={22} md={24} sm={24} xs={24}>
-          <Row align="middle" justify="center" gutter={[16, 16]}>
-            <Col xxl={3} xl={1} lg={1} md={2} sm={2} xs={12}>
-              <Button type="ghost">
-                <Link to="/proyectos" style={{ fontWeight: "bold" }}>
-                  MIS PROYECTOS
-                </Link>
-              </Button>
-            </Col>
-            <Col xxl={3} xl={1} lg={1} md={2} sm={2} xs={12}>
-              <Button type="ghost">
-                <LinkAntd
-                  href="https://www.instagram.com/_willyvanilli/"
-                  target="_blank"
-                  style={{ fontWeight: "bold" }}
-                >
-                  DESCARGAR CV
-                </LinkAntd>
-              </Button>
-            </Col>
-          </Row>
+        <Col xxl={24} xl={24} lg={22} md={24} sm={24} xs={24}>
+          <Space
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button type="ghost" style={{ marginLeft: 10 }}>
+              <Link to="/proyectos" style={{ fontWeight: "bold" }}>
+                MIS PROYECTOS
+              </Link>
+            </Button>
+            <Button type="ghost">
+              <LinkAntd
+                href={cv}
+                download="WilliamsGaleanoCV"
+                style={{ fontWeight: "bold" }}
+              >
+                DESCARGAR CV
+              </LinkAntd>
+            </Button>
+          </Space>
         </Col>
       </Row>
     </motion.div>
