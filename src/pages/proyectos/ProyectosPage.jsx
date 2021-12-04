@@ -42,6 +42,8 @@ const containerVariant = {
 const ProyectosPage = () => {
   const [visible1, setVisible1] = useState(false);
   const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
+  const [visible4, setVisible4] = useState(false);
   return (
     <motion.div
       variants={containerVariant}
@@ -197,13 +199,13 @@ const ProyectosPage = () => {
                   style={{ objectFit: "contain", height: "auto" }}
                   preview={{ visible: false }}
                   src={portadaApiEvento}
-                  onClick={() => setVisible1(true)}
+                  onClick={() => setVisible3(true)}
                 />
                 <div style={{ display: "none" }}>
                   <Image.PreviewGroup
                     preview={{
-                      visible: visible1,
-                      onVisibleChange: (vis) => setVisible1(vis),
+                      visible: visible3,
+                      onVisibleChange: (vis) => setVisible3(vis),
                     }}
                   >
                     <Image src={portadaApiEvento} />
@@ -259,13 +261,13 @@ const ProyectosPage = () => {
                   style={{ objectFit: "contain", height: "auto" }}
                   preview={{ visible: false }}
                   src={portadaPortfolio}
-                  onClick={() => setVisible2(true)}
+                  onClick={() => setVisible4(true)}
                 />
                 <div style={{ display: "none" }}>
                   <Image.PreviewGroup
                     preview={{
-                      visible: visible2,
-                      onVisibleChange: (vis) => setVisible2(vis),
+                      visible: visible4,
+                      onVisibleChange: (vis) => setVisible4(vis),
                     }}
                   >
                     <Image src={portadaPortfolio} />
